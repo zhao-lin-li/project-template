@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    build: ..
+    command:
+      - scripts/start_app.sh
+    env_file:
+      - development.env

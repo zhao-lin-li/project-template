@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    extends:
+      file: docker/docker-compose.common.yml
+      service: app
+    volumes:
+      - .:/usr/src/app/
