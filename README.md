@@ -6,7 +6,7 @@ Getting Started
 2. install docker-compose
 3. clone repository: `git clone --recursive TBD`
 4. run bootstrap.sh: `./bootstrap.sh`
-5. start server: `docker-compose up`
+5. start service: `docker-compose up`
 
 Testing
 -------
