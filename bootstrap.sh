@@ -13,7 +13,7 @@ set_defaults() {
 }
 
 gather_options() {
-  while getopts "3:" OPT; do
+  while getopts "e:" OPT; do
     case $OPT in
       e)
         ENV=$OPTARG
