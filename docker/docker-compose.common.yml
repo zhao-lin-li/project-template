@@ -5,4 +5,4 @@ services:
     command:
       - scripts/start_app.sh
     env_file:
-      - development.env
+      - app.env
