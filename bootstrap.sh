@@ -6,7 +6,7 @@ set -e
 
 ### define functions
 SRC_DIR=$(cd "$(dirname "$0")"; pwd -P)
-. "$SRC_DIR"/scripts/functions.sh
+. "$SRC_DIR"/scripts/bootstrap/functions.sh
 
 set_defaults() {
   ENV=development
