@@ -1,7 +1,8 @@
 FROM debian:latest
 
 RUN apt-get update && apt-get install -qq -y \
-  shellcheck
+    shellcheck \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app/
 
