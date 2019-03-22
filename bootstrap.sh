@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script bootstraps the application
 
 set -e
 
 ### define functions
-SRC_DIR=$(cd "$(dirname "$0")"; pwd -P)
+SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$SRC_DIR"/scripts/bootstrap/functions.sh
 
 set_defaults() {
@@ -21,7 +21,6 @@ gather_options() {
     esac
   done
 }
-
 ### define functions:end
 
 set_defaults
