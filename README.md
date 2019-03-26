@@ -16,6 +16,10 @@ Documenting
 -----------
 * TBD
 
+Linting
+-------
+* TBD
+
 Notes
 -----
 * TBD
