@@ -14,16 +14,16 @@ Getting Started
 
 Testing
 -------
-* TBD
+TBD
 
 Documenting
 -----------
-* TBD
+TBD
 
 Linting
 -------
-* TBD
+TBD
 
 Notes
 -----
-* TBD
+TBD
