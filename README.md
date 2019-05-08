@@ -14,15 +14,21 @@ Getting Started
 
 Testing
 -------
-TBD
+To test the application:
+
+    $ scripts/test_app.sh
 
 Documenting
 -----------
-TBD
+To document the application:
+
+    $ scripts/document_app.sh
 
 Linting
 -------
-TBD
+To lint the application:
+
+    $ scripts/lint_app.sh
 
 Notes
 -----
