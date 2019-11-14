@@ -1,8 +1,14 @@
 version: '3'
+x-app:
+  &app-base
+  build: .
+  command:
+    - scripts/start_app.sh
+  env_file:
+    - docker/app.env
+
 services:
   app:
-    extends:
-      file: docker/docker-compose.base.yml
-      service: app
+    <<: *app-base
     volumes:
       - .:/usr/src/app/
