@@ -1,4 +1,8 @@
 version: '3.4'
+
+# using extension fields is overkill in this scenario,
+# but it can be useful if you need multiple similar
+# instances of the same service
 x-app-base:
   &app-base
   build: .
@@ -10,5 +14,3 @@ x-app-base:
 services:
   app:
     <<: *app-base
-    volumes:
-      - .:/usr/src/app/
