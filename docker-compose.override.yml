@@ -3,4 +3,4 @@ version: '3.4'
 services:
   app:
     volumes:
-      - .:/usr/src/app/
+      - .:${APP_DIR}/
