@@ -1,8 +1,16 @@
-version: '3'
+version: '3.4'
+
+# using extension fields is overkill in this scenario,
+# but it can be useful if you need multiple similar
+# instances of the same service
+x-app-base:
+  &app-base
+  build: .
+  command:
+    - scripts/start_app.sh
+  env_file:
+    - docker/app.env
+
 services:
   app:
-    extends:
-      file: docker/docker-compose.base.yml
-      service: app
-    volumes:
-      - .:/usr/src/app/
+    <<: *app-base
