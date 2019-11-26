@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
 # This script documents the application

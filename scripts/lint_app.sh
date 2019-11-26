@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This script lints the application
 
