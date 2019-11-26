@@ -1,9 +1,11 @@
 FROM debian:latest
 
+ARG APP_DIR
+
 RUN apt-get update && apt-get install -qq -y \
     shellcheck \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /usr/src/app/
+WORKDIR $APP_DIR/
 
-COPY . /usr/src/app/
+COPY . ${APP_DIR}

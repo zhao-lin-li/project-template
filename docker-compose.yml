@@ -5,7 +5,10 @@ version: '3.4'
 # instances of the same service
 x-app-base:
   &app-base
-  build: .
+  build:
+    context: .
+    args:
+      - APP_DIR=${APP_DIR}
   command:
     - scripts/start_app.sh
   env_file:
