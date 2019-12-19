@@ -16,19 +16,19 @@ Testing
 -------
 To test the application:
 
-    $ scripts/test_app.sh
+    app$ scripts/test_app.sh
 
 Documenting
 -----------
 To document the application:
 
-    $ scripts/document_app.sh
+    app$ scripts/document_app.sh
 
 Linting
 -------
 To lint the application:
 
-    $ scripts/lint_app.sh
+    app$ scripts/lint_app.sh
 
 Notes
 -----
