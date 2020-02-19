@@ -6,6 +6,6 @@ RUN apt-get update && apt-get install -qq -y \
     shellcheck \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR $APP_DIR/
+WORKDIR ${APP_DIR}/
 
 COPY . ${APP_DIR}
