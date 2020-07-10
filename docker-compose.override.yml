@@ -1,6 +1,10 @@
 version: '3.4'
 
+x-app-override:
+  &app-override
+  volumes:
+    - .:${APP_DIR}/
+
 services:
   app:
-    volumes:
-      - .:${APP_DIR}/
+    <<: *app-override

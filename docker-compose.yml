@@ -12,7 +12,7 @@ x-app-base:
   command:
     - scripts/start_app.sh
   env_file:
-    - docker/app.env
+    - app.env
 
 services:
   app:
