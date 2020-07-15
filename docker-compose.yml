@@ -11,8 +11,6 @@ x-app-base:
       - APP_DIR=${APP_DIR}
   command:
     - scripts/start_app.sh
-  env_file:
-    - app.env
 
 services:
   app:

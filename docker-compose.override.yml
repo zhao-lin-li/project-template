@@ -2,6 +2,8 @@ version: '3.4'
 
 x-app-override:
   &app-override
+  env_file:
+    - app.env
   volumes:
     - .:${APP_DIR}/
 
