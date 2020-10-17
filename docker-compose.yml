@@ -15,3 +15,6 @@ x-app-base:
 services:
   app:
     <<: *app-base
+
+  app-production:
+    <<: *app-base

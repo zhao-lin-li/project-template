@@ -4,6 +4,8 @@ x-app-override:
   &app-override
   env_file:
     - app.env
+  build:
+    target: development
   volumes:
     - .:${APP_DIR}/
 
