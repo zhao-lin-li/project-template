@@ -15,7 +15,7 @@ teardown_containers() (
 
   case $environment in
     'development')
-      docker-compose down -v
+      docker-compose down --volumes
     ;;
   esac
 )
