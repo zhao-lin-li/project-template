@@ -12,3 +12,4 @@ x-app-override:
 services:
   app:
     <<: *app-override
+
