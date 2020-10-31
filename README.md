@@ -18,17 +18,17 @@ To test the application:
 
     app$ scripts/test_app.sh
 
-Documenting
------------
-To document the application:
-
-    app$ scripts/document_app.sh
-
 Linting
 -------
 To lint the application:
 
     app$ scripts/lint_app.sh
+
+Documenting
+-----------
+To document the application:
+
+    app$ scripts/document_app.sh
 
 Notes
 -----
