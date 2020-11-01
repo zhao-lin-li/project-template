@@ -30,7 +30,7 @@ setup_containers() (
 
   case $environment in
     'development')
-      docker-compose build
+      docker-compose build --pull
     ;;
   esac
 )
