@@ -2,8 +2,8 @@
 
 # This script lints the application
 
-shellcheck -- \
-  *.sh \
-  scripts/*.sh \
-  scripts/bootstrap/*.sh
+shellcheck -- *.sh
+for file in scripts/**/*.sh; do
+  shellcheck "$file"
+done
 
