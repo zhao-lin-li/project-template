@@ -13,7 +13,11 @@ RUN yum --nobest --assumeyes update && yum --allowerasing --assumeyes install \
 COPY . ${APP_DIR}
 
 
-FROM registry.access.redhat.com/ubi8/ubi-minimal
+FROM development as builder
+RUN scripts/build_app.sh
+
+
+FROM registry.access.redhat.com/ubi8/ubi-minimal as production
 
 ARG APP_DIR
 WORKDIR ${APP_DIR}/
