@@ -22,8 +22,9 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal as production
 ARG APP_DIR=/usr/src/app/
 WORKDIR ${APP_DIR}/
 
-#RUN microdnf install \
-#  && microdnf clean all
+RUN microdnf update && microdnf install \
+  && microdnf clean all; \
+  exit 0 # hacky workaround to allow Docker to continue building when microdnf fails
 
 COPY . ${APP_DIR}
 
