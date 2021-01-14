@@ -13,3 +13,6 @@ services:
   app:
     <<: *app-override
 
+  app-production:
+    <<: *app-override
+
