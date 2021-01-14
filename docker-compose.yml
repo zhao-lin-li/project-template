@@ -5,7 +5,7 @@ version: '3.4'
 # instances of the same service
 x-app-base:
   &app-base
-  build:
+  build: &app-build-base
     context: .
     args:
       - APP_DIR=${APP_DIR}
@@ -15,7 +15,13 @@ x-app-base:
 services:
   app:
     <<: *app-base
+    build:
+      <<: *app-build-base
+      target: development
 
   app-production:
     <<: *app-base
+    build:
+      <<: *app-build-base
+      target: production
 
