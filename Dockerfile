@@ -21,8 +21,7 @@ ARG APP_DIR=/usr/src/app/
 WORKDIR ${APP_DIR}/
 
 RUN microdnf update && microdnf install \
-  && microdnf clean all; \
-  exit 0 # hacky workaround to allow Docker to continue building when microdnf fails
+  && microdnf clean all # this will error out if no packages are listed above for installation
 
 COPY . ${APP_DIR}
 
