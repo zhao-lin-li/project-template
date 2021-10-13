@@ -11,7 +11,7 @@ Prerequisites
 Getting Started
 ---------------
 1. run bootstrap.sh: `./bootstrap.sh`
-1. start service: `docker-compose up`
+1. start service: `docker compose up`
 
 Testing
 -------

@@ -15,7 +15,7 @@ teardown_containers() (
 
   case $environment in
     'development')
-      docker-compose down --volumes
+      docker compose down --volumes
     ;;
   esac
 )
@@ -30,7 +30,7 @@ setup_containers() (
 
   case $environment in
     'development')
-      docker-compose build --pull
+      docker compose build --pull
     ;;
   esac
 )
