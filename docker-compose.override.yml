@@ -14,3 +14,13 @@ services:
   app-production:
     <<: *app-override
 
+  shell-linter:
+    image: koalaman/shellcheck-alpine:v0.7.1
+    working_dir: /mnt/
+    command:
+      - scripts/lint_app.sh
+    volumes:
+      - .:/mnt/
+    deploy:
+      replicas: 0
+

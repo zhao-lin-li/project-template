@@ -21,9 +21,14 @@ To test the application:
 
 Linting
 -------
-To lint the application:
+To lint the shell scripts:
 
-    app$ scripts/lint_app.sh
+    $ docker compose run shell-linter
+    shell-linter$ scripts/lint_app.sh
+
+    or
+
+    $ docker compose run shell-linter scripts/lint_app.sh
 
 Documenting
 -----------
