@@ -3,11 +3,13 @@ version: '3.4'
 x-app-base:
   &app-base
   build: &app-build-base
-    context: .
+    context: ${APP_BASE:-.}
     args:
       - APP_DIR=${APP_DIR}
   command:
     - scripts/start_app.sh
+  env_file:
+    - ${APP_BASE:-.}/app.env
 
 services:
   app:

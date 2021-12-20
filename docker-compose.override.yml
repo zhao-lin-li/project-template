@@ -2,10 +2,8 @@ version: '3.4'
 
 x-app-override:
   &app-override
-  env_file:
-    - app.env
   volumes:
-    - .:${APP_DIR}/
+    - ${APP_BASE:-.}:${APP_DIR}/
 
 services:
   app:
@@ -20,7 +18,7 @@ services:
     command:
       - scripts/lint_app.sh
     volumes:
-      - .:/mnt/
+      - ${APP_BASE:-.}:/mnt/
     deploy:
       replicas: 0
 
