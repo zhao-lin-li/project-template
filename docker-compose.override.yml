@@ -3,7 +3,7 @@ version: '3.4'
 x-app-override:
   &app-override
   volumes:
-    - ${APP_BASE:-.}:${APP_DIR}/
+    - ${APP_ROOT_HOST:-.}:${APP_ROOT_CONTAINER}/
 
 services:
   app:
@@ -14,5 +14,5 @@ services:
 
   shell-linter:
     volumes:
-      - ${APP_BASE:-.}:/mnt/
+      - ${APP_ROOT_HOST:-.}:/mnt/
 
