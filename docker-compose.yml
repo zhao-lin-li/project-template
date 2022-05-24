@@ -1,0 +1,36 @@
+version: '3.4'
+
+x-app-base:
+  &app-base
+  build: &app-build-base
+    context: ${APP_ROOT_HOST:-.}
+    args:
+      - APP_ROOT_CONTAINER=${APP_ROOT_CONTAINER}
+  command:
+    - scripts/start_app.sh
+  env_file:
+    - ${APP_ROOT_HOST:-.}/app.env
+
+services:
+  app:
+    <<: *app-base
+    build:
+      <<: *app-build-base
+      target: development
+
+  app-production:
+    <<: *app-base
+    build:
+      <<: *app-build-base
+      target: production
+    profiles:
+      - production
+
+  shell-linter:
+    image: koalaman/shellcheck-alpine:v0.7.1
+    working_dir: /mnt/
+    command:
+      - scripts/lint_app.sh
+    profiles:
+      - shell-checker
+
