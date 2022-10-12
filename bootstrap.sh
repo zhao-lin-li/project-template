@@ -2,6 +2,9 @@
 
 # This script bootstraps the application
 
+# shellcheck disable=2031 # $environment variable is defined in a function that
+                          # is abstracted away
+
 set -e
 SRC_DIR=$(cd "$(dirname "$0")" || exit; pwd -P)
 
