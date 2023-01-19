@@ -2,8 +2,8 @@ FROM registry.access.redhat.com/ubi8/ubi as development
 ARG APP_ROOT_CONTAINER=/usr/src/app/
 WORKDIR ${APP_ROOT_CONTAINER}/
 
-#RUN yum --nobest --assumeyes update && yum --allowerasing --assumeyes install \
-#  && yum clean all # this will error out if no packages are listed above for installation
+COPY scripts/install_dependencies.sh ${APP_ROOT_CONTAINER}/scripts/
+RUN scripts/install_dependencies.sh
 
 COPY . ${APP_ROOT_CONTAINER}
 
