@@ -42,7 +42,10 @@ teardown_containers() (
 
   case $environment in
     'development')
-      docker compose down --volumes
+      docker compose \
+        down \
+        --volumes \
+        --remove-orphans
     ;;
   esac
 )
