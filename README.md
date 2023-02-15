@@ -36,7 +36,7 @@ To document the application:
 
     app$ scripts/document_app.sh
 
-Notes
------
+Additional Notes
+----------------
 TBD
 
