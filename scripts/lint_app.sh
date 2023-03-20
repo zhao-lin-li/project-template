@@ -8,6 +8,7 @@ _update_findings_count() {
 }
 
 shellcheck --external -- *.sh || _update_findings_count
+shellcheck --external -- scripts/*.sh || _update_findings_count
 for file in scripts/**/*.sh; do
   shellcheck --external "$file" || _update_findings_count
 done
