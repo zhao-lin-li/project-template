@@ -29,8 +29,6 @@ services:
   shell-linter:
     image: koalaman/shellcheck-alpine:v0.7.1
     working_dir: /mnt/
-    command:
-      - scripts/lint_app.sh
     profiles:
       - shell-checker
 

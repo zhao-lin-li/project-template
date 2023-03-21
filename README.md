@@ -23,7 +23,7 @@ Linting
 -------
 To lint the shell scripts:
 
-    $ docker compose run shell-linter
+    $ docker compose run shell-linter /bin/sh
     shell-linter$ scripts/lint_app.sh
 
     or
