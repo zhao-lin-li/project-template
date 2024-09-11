@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi as development
+FROM registry.access.redhat.com/ubi8/ubi AS development
 ARG APP_ROOT_CONTAINER=/usr/src/app/
 WORKDIR ${APP_ROOT_CONTAINER}/
 
@@ -8,11 +8,11 @@ RUN scripts/install_dependencies.sh
 COPY . ${APP_ROOT_CONTAINER}
 
 
-FROM development as builder
+FROM development AS builder
 RUN scripts/build_app.sh
 
 
-FROM registry.access.redhat.com/ubi8/ubi-minimal as production
+FROM registry.access.redhat.com/ubi8/ubi-minimal AS production
 ARG APP_ROOT_CONTAINER=/usr/src/app/
 WORKDIR ${APP_ROOT_CONTAINER}/
 

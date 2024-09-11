@@ -1,5 +1,3 @@
-version: '3.4'
-
 x-app-base:
   &app-base
   build: &app-build-base
