@@ -1,5 +1,4 @@
-x-app-override:
-  &app-override
+x-app-override: &app-override
   volumes:
     - ${APP_ROOT_HOST:-.}:${APP_ROOT_CONTAINER}/
 

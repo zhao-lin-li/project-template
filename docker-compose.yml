@@ -1,5 +1,4 @@
-x-app-base:
-  &app-base
+x-app-base: &app-base
   build: &app-build-base
     context: ${APP_ROOT_HOST:-.}
     args:
