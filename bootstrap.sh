@@ -8,8 +8,8 @@
 set -e
 SRC_DIR=$(cd "$(dirname "$0")" || exit; pwd -P)
 
-# shellcheck source=scripts/bootstrap/functions.sh
-. "$SRC_DIR"/scripts/bootstrap/functions.sh
+# shellcheck source=scripts/bootstrap.functions.sh
+. "$SRC_DIR"/scripts/bootstrap.functions.sh
 
 set_defaults
 gather_options "$@"
