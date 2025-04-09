@@ -9,9 +9,10 @@ _update_findings_count() {
 
 shellcheck --external -- *.sh || _update_findings_count
 shellcheck --external -- scripts/*.sh || _update_findings_count
-for file in scripts/**/*.sh; do
-  shellcheck --external "$file" || _update_findings_count
-done
+# uncomment if subfolders are added back
+#for file in scripts/**/*.sh; do
+#  #shellcheck --external "$file" || _update_findings_count # extra hash avoids shell check thinking it is a directive
+#done
 
 exit $findings_found
 
