@@ -13,6 +13,8 @@ Getting Started
 1. run bootstrap.sh: `./bootstrap.sh`
 1. start service: `docker compose up`
 
+To access the container terminal: `docker compose run app bash`
+
 Testing
 -------
 To test the application:
