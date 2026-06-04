@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi AS development
+FROM registry.access.redhat.com/ubi10/ubi AS development
 ARG APP_ROOT_CONTAINER=/usr/src/app/
 WORKDIR ${APP_ROOT_CONTAINER}/
 
@@ -12,7 +12,7 @@ FROM development AS builder
 RUN scripts/build_app.sh
 
 
-FROM registry.access.redhat.com/ubi8/ubi-minimal AS production
+FROM registry.access.redhat.com/ubi10/ubi-minimal AS production
 ARG APP_ROOT_CONTAINER=/usr/src/app/
 WORKDIR ${APP_ROOT_CONTAINER}/
 
